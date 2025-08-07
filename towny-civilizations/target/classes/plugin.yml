@@ -1,0 +1,13 @@
+name: TownyCivilizations
+version: 1.0
+main: io.github.eggsdevs.townycivilizations.TownyCivilizations
+api-version: 1.21
+commands:
+  townycivilizations:
+    description: Shows a brief overview of Towny Civilizations.
+    usage: /townycivilizations
+    permission: townycivilizations.use
+permissions:
+  townycivilizations.use:
+    description: Allows use of /townycivilizations
+    default: true
