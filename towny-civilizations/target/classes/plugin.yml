@@ -8,7 +8,14 @@ commands:
     description: Shows a brief overview of Towny Civilizations.
     usage: /townycivilizations
     permission: townycivilizations.use
+  mayoraldesks:
+    description: Lists all active Mayoral Desks.
+    usage: /mayoraldesks [page]
+    permission: townycivilizations.mayoraldesks
 permissions:
   townycivilizations.use:
     description: Allows use of /townycivilizations
     default: true
+  townycivilizations.mayoraldesks:
+    description: Allows listing of Mayoral Desks
+    default: op
