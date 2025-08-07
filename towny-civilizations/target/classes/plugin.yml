@@ -2,6 +2,7 @@ name: TownyCivilizations
 version: 1.0
 main: io.github.eggsdevs.townycivilizations.TownyCivilizations
 api-version: 1.21
+depend: [Towny]
 commands:
   townycivilizations:
     description: Shows a brief overview of Towny Civilizations.

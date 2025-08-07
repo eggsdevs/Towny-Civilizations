@@ -11,15 +11,13 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/**
- * Main plugin class for TownyCivilizations.
- */
 public class TownyCivilizations extends JavaPlugin {
 
     @Override
     public void onEnable() {
         getLogger().info("TownyCivilizations enabled");
         registerMayoralDeskRecipe();
+        getServer().getPluginManager().registerEvents(new MayoralDeskListener(), this);
     }
 
     @Override
@@ -32,9 +30,6 @@ public class TownyCivilizations extends JavaPlugin {
         return false;
     }
 
-    /**
-     * Registers the crafting recipe for a special lectern named "Mayoral Desk".
-     */
     private void registerMayoralDeskRecipe() {
         ItemStack mayoralDesk = new ItemStack(Material.LECTERN);
         ItemMeta meta = mayoralDesk.getItemMeta();
