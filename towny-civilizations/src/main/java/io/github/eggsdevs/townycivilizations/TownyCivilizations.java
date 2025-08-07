@@ -1,5 +1,7 @@
 package io.github.eggsdevs.townycivilizations;
 
+import java.util.Arrays;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -17,7 +19,7 @@ public class TownyCivilizations extends JavaPlugin {
     public void onEnable() {
         getLogger().info("TownyCivilizations enabled");
         registerMayoralDeskRecipe();
-        getServer().getPluginManager().registerEvents(new MayoralDeskListener(), this);
+        getServer().getPluginManager().registerEvents(new MayoralDeskListener(this), this);
     }
 
     @Override
@@ -35,6 +37,7 @@ public class TownyCivilizations extends JavaPlugin {
         ItemMeta meta = mayoralDesk.getItemMeta();
         if (meta != null) {
             meta.setDisplayName(ChatColor.GOLD + "Mayoral Desk");
+            meta.setLore(Arrays.asList(ChatColor.GRAY + "Allows mayors to configure their town."));
             mayoralDesk.setItemMeta(meta);
         }
 
